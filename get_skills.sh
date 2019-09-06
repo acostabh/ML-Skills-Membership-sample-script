@@ -2,7 +2,7 @@
 echo off
 token=$(jq -r ".token" token.json)
 # switch a = show all invoices in descending date order, else show only pending invoices in ascending date order (created_at)
-max_page=2 #maximum number of results per page (200 is the limit set by Mavenlink)
+max_page=200 #maximum number of results per page (200 is the limit set by Mavenlink)
 skills=$(curl -H 'Authorization: Bearer '$token 'https://api.mavenlink.com/api/v1/skills?per_page='$max_page'&page=1')
 skills_count=$(jq -n "$skills" | jq -r '.count')
 page_count=$(jq -n "$skills" | jq -r '.meta.page_count')
