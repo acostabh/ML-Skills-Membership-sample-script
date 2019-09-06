@@ -30,6 +30,7 @@ This shell script (Mac/Linux) uses a Mavenlink API endpoint to update skill memb
   2. Navigate to the folder where you saved the script
     - E.G: cd ~/Documents/ML-Skills-Membership-sample-script
   3. Run the script: ./set_skills.sh
+      - this script uses the users_skills.csv file updated in the previous step. Please ensure the file and script are in the same folder.
   4. Follow the instructions/output on the prompt
   5. View results/response on log file in the same folder as the script (yyy-mm-dd_log.txt)
 
